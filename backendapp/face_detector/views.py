@@ -62,7 +62,7 @@ def detect(request):
         t_stop = process_time()
         total = t_stop-t_start
         # update the data dictionary with the faces detected
-        data.update({"image": str(jpg_as_text)[2:-1], "face": len(rects), "date": str(dt), "pro_time": str(total), "success": True})
+        data.update({"image": str(jpg_as_text)[2:-1], "face": len(rects), "date": str(dt), "pro_time": str(total)})
     
     # return a JSON response
     return JsonResponse(data)
